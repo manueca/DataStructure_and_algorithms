@@ -5,17 +5,15 @@ def minimumAbsoluteDifference(arr):
             if abs(arr[j])>abs(arr[j+1]):
                 arr[j],arr[j+1]=abs(arr[j+1]),abs(arr[j])
 
-    diff=10*20
+    diff=10*200000
 
     if n < 2 or n > 10000 or arr[n-1]>(10**9):
         diff=0
     else:
-        for i in range(n-1): 
-            print (arr[i],i)
-            if abs(arr[i+1] - arr[i]) < diff: 
-                diff =abs(arr[i+1] - arr[i])
-                print (arr[i+1],arr[i],diff)
-    return diff
+    	diffs = []
+    	for i in range(len(arr)-1):
+        	diffs.append(abs(arr[i]-arr[i+1]))
+    	return min(diffs)
 
 
 if __name__ == '__main__':
