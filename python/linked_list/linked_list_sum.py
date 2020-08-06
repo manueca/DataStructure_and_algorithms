@@ -19,6 +19,5 @@ class Solution:
             carry = total // 10    
         if carry >0:
             curr.next=ListNode(carry)
-            curr=curr.next
-            
+            curr=curr.next            
         return head.next
