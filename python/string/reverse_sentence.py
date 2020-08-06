@@ -1,5 +1,4 @@
 # Function to Reverse Sentence
-
 def reverseSentence(Sentence):
 	left=0
 	Sentence_lst=Sentence.strip().split(' ')
